@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>По плану — бюджет месяца</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header><a href="/" class="logo">◒ По плану</a><span>Личный бюджет · Java</span></header>
+<main>
+<section class="intro"><p class="eyebrow">ДЕНЬГИ С ПОНЯТНОЙ ЦЕЛЬЮ</p><h1>Жить сейчас.<br><em>Копить на важное.</em></h1><p>Две зарплаты, один спокойный план. Узнай, сколько оставить на жизнь и сколько отложить на свою цель.</p></section>
+<div class="layout"><form id="budget">
+<section class="card"><h2><span>01</span> Доход за месяц</h2><div class="two"><label>Первая выплата, ₽<input name="first" type="number" min="0" max="1000000000" step="0.01" value="60000" required></label><label>Вторая выплата, ₽<input name="second" type="number" min="0" max="1000000000" step="0.01" value="40000" required></label></div></section>
+<section class="card"><h2><span>02</span> Расходы на жизнь</h2><div class="two"><label>Жильё и счета, ₽<input name="housing" type="number" min="0" max="1000000000" step="0.01" value="25000" required></label><label>Продукты, ₽<input name="food" type="number" min="0" max="1000000000" step="0.01" value="15000" required></label><label>Транспорт, ₽<input name="transport" type="number" min="0" max="1000000000" step="0.01" value="5000" required></label><label>Прочие обязательные, ₽<input name="other" type="number" min="0" max="1000000000" step="0.01" value="5000" required></label></div><label>Резерв на непредвиденное в месяц, ₽<input name="reserve" type="number" min="0" max="1000000000" step="0.01" value="5000" required></label></section>
+<section class="card"><h2><span>03</span> Твоя цель</h2><label>На что копим?<input name="title" maxlength="80" value="Моя финансовая свобода"></label><div class="two"><label>Нужно накопить, ₽<input name="goal" type="number" min="0" max="1000000000" step="0.01" value="300000" required></label><label>Уже отложено, ₽<input name="saved" type="number" min="0" max="1000000000" step="0.01" value="60000" required></label></div><label>Срок от сегодняшнего дня, месяцев<input name="months" type="number" min="1" max="600" step="1" value="12" required></label></section>
+<button class="primary" type="submit">Рассчитать мой план</button><p class="privacy">Данные используются только для расчёта. Сохранение в браузере — по кнопке ниже.</p>
+</form><aside id="result" aria-live="polite"><div class="card">Считаем твой план…</div></aside></div>
+<footer>План для полных месяцев и стабильного дохода. Без процентов по вкладам и инфляции. Выплаты распределяются пропорционально суммам, без учёта дат счетов.</footer>
+</main></body></html>
